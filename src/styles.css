@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+body{
+    background-color: #F5F5F5;
+}
+
+
+.bg-page-1{
+    background-color: #F5F5F5;
+}
+
+.bg-page-2{
+    background-color: #F2F8FA;
+}
+
+.b-raduis-10{
+    border-radius: 10px;
+}
+
+.color-1{
+   color: #55768B
+}
+
+::placeholder { 
+    color: #84AECD;
+    opacity: 1; 
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #84AECD;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #84AECD;
+  }
+
+
+
+
+.font-14{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.font-13{
+    font-size: 13px;
+}

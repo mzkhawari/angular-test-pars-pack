@@ -1,0 +1,33 @@
+<nz-table nzBordered nzSize="middle" class="w-full text-center" [nzScroll]="{ y: '140' }" >
+    <thead class="text-left">
+      <tr>
+        <th  nzWidth="500px" nzLeft>نام / مشخصه</th>
+        <th  nzWidth="150px" >هزینه</th>
+        <th  nzWidth="150px" >تاریخ سررسید</th>
+        <th  nzWidth="100px"  >عملیات</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of dataItem">
+        <td>
+          <div class="grid grid-cols-3 ">
+            <span class="icon-menu" > * </span>
+            <span class="icon-menu" > 
+              <img src="../../../assets/svgs/{{data.type}}.svg" />
+            </span>
+            <span>{{data.name}}</span>
+          </div>
+        </td>
+        <td>{{data.amount}}</td>
+        <td>{{data.nextduedate}}</td>
+        <td>
+          <div class="">
+            <a *ngIf="data.status=='Active'" > مدیریت سرویس </a>
+            <a *ngIf="data.status=='Pendding'" > مشاهده فاکتور </a>
+            <a *ngIf="data.status=='Active1'" > در حال آماده سازی </a>
+            <a *ngIf="data.status=='Cancelled'" > لغو شده </a>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>

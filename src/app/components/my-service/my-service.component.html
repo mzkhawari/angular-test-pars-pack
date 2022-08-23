@@ -1,0 +1,19 @@
+<div class="w-full">
+  <div class="mx-28 bg-white" >
+    <app-page-title-search 
+      title="سرویس های من"
+      (OnSearch)="onSearchItem($event)"   >
+    </app-page-title-search>    
+    <app-my-service-menu 
+      [menuItem]="menuData">      
+    </app-my-service-menu>
+    <app-my-service-table 
+      [dataItem]="dataSource"  ></app-my-service-table>
+  </div>
+</div>
+
+
+
+<!-- <ng-template #extraTemplate>
+  <i nz-icon nzType="ellipsis" nzTheme="outline"></i>
+</ng-template> -->

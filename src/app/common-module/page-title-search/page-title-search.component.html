@@ -1,0 +1,10 @@
+<div class="p-4 ">
+  <div class="grid grid-cols-2 justify-items-stretch " >
+    <span class="justify-self-start title-page" >{{title}}</span>
+    <i data-feather="more-vertical"  class="justify-self-end icon-menu" ></i>
+  </div>
+
+  <div class="grid grid-cols-3 justify-items-stretch " >
+    <input class="text-center col-start-2 search-box" placeholder="سرویس مورد نظر خود را جستجو نمایید..."  type="search" [(ngModel)]="searchText" (blur)="onSearch($event)" />
+  </div>
+</div>
