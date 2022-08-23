@@ -10,6 +10,7 @@ export class AppComponent implements AfterViewInit {
   title = 'angular-test-pars-pack';
 
 
+  
   ngAfterViewInit() {
     feather.replace();
   }
