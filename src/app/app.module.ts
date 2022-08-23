@@ -10,6 +10,8 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { HttpClientModule } from '@angular/common/http';
 import { MyServiceTableComponent } from './components/my-service-table/my-service-table.component';
+import { TableVirtualScrollModule } from 'ng-cdk-table-virtual-scroll';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
 
 
 @NgModule({
@@ -23,8 +25,10 @@ import { MyServiceTableComponent } from './components/my-service-table/my-servic
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    TableVirtualScrollModule,
     NzIconModule,
     NzTableModule,
+    NzTabsModule,
     CommonComponentAntModule
   ],
   providers: [],

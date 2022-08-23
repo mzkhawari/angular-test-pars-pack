@@ -1,14 +1,17 @@
-<div class="w-full">
-  <div class="mx-28 bg-white" >
+<div class="w-full pt-5">
+  <div class="mx-28 bg-white main-page" >
     <app-page-title-search 
       title="سرویس های من"
       (OnSearch)="onSearchItem($event)"   >
     </app-page-title-search>    
     <app-my-service-menu 
-      [menuItem]="menuData">      
+      [menuItem]="menuData"
+      (OnSelectType)="filterByType($event)"  >      
     </app-my-service-menu>
-    <app-my-service-table 
-      [dataItem]="dataSource"  ></app-my-service-table>
+    <div class="scroll-smooth scroll-auto overflow-y-scroll overflow-x-hidden "  [ngClass]="winHeight > 760 ? 'grid-height' : 'grid-height-compact' " >
+      <app-my-service-table  
+      [dataItem]="dataSourceFilterd"  ></app-my-service-table>
+    </div>
   </div>
 </div>
 

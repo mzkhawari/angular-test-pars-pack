@@ -3,6 +3,7 @@
     font-size: 14px;
     line-height: 20px;
     color: #55768B;
+    font-family: 'IRANYekan';
 }
 
 .search-box{
@@ -12,11 +13,13 @@
     line-height: 22px;
     background-color: #F2F8FA;
     font-weight: 400;
+    font-family: 'IRANYekan';
 }
 
 .search-box::placeholder { 
     color: #84AECD;
     opacity: 1; 
+    font-family: 'IRANYekan';
 }
 
 

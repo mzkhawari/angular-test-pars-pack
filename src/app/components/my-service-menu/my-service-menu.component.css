@@ -2,6 +2,7 @@
 .main-box{
     padding-top: 25px;
     padding-bottom: 42px;
+    font-family: 'IRANYekan';
 }
 
 .title-service{
@@ -9,6 +10,7 @@
     line-height: 24px;
     font-weight: 700;    
     text-align: center;
+    cursor: pointer;
 }
 
 .title-service-active{
@@ -30,6 +32,7 @@
     width: 74px;
     height: 25px;
     margin: auto;
+    cursor: pointer;
 }
 
 .title-sub-service-active{
@@ -47,4 +50,14 @@
     height: 46px;
     text-align: center;
     margin: auto;
+    cursor: pointer;
+}
+
+
+.ant-tabs>.ant-tabs-nav .ant-tabs-nav-wrap, .ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-wrap{
+    flex:auto !important ;
+}
+
+.ant-tabs-rtl .ant-tabs-nav .ant-tabs-tab {
+    margin: 0 32px 0 32px !important;
 }

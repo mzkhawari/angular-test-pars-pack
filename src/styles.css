@@ -5,11 +5,31 @@
 @tailwind utilities;
 
 
+@font-face {font-family: "IRANYekan";
+    src: url("assets/fonts/IrYekan/IRYekan.eot"); /* IE9*/
+    src: url("assets/fonts/IrYekan/IRYekan.eot") format("embedded-opentype"), /* IE6-IE8 */
+    url("assets/fonts/IrYekan/IRYekan.woff2") format("woff2"), /* chrome、firefox */
+    url("assets/fonts/IrYekan/IRYekan.woff") format("woff"), /* chrome、firefox */
+    url("assets/fonts/IrYekan/IRYekan.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("assets/fonts/IrYekan/IRYekan.otf") format("svg"); /* iOS 4.1- */
+  }
+
+  .ant-tabs>.ant-tabs-nav .ant-tabs-nav-list{
+    width: 100vw;
+    flex-grow: 1 !important;
+  }
+
+  .ant-tabs-tab {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 32px 0 32px !important;
+    display: inline !important; 
+  }
 
 
-body{
-    background-color: #F5F5F5;
-}
+    body{
+        background-color: #F5F5F5 !important;
+    }
 
 
 .bg-page-1{
@@ -26,29 +46,4 @@ body{
 
 .color-1{
    color: #55768B
-}
-
-::placeholder { 
-    color: #84AECD;
-    opacity: 1; 
-}
-  
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #84AECD;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: #84AECD;
-  }
-
-
-
-
-.font-14{
-    font-size: 14px;
-    line-height: 20px;
-}
-
-.font-13{
-    font-size: 13px;
 }

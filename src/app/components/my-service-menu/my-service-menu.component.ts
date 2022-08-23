@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { NzTabPosition } from 'ng-zorro-antd/tabs';
 import { ServiceMenuModel } from '../models/service-menu-model.model';
 
 @Component({
@@ -11,14 +12,40 @@ export class MyServiceMenuComponent implements OnInit {
   @Input()
   menuItem:ServiceMenuModel[]=[]
 
-  constructor() { }
+  @Output()
+  OnSelectType: EventEmitter<any> =  new EventEmitter();
 
+  winWidth:any;  
+  winHeight:any;
+  constructor() { 
+
+
+  }
+
+  selectedType:string="all-service";
   ngOnInit() {
+    debugger;
+    this.winWidth = window.innerWidth;  
+    this.winHeight = window.innerHeight
+  }
+
+  selectedtab(arg:any[]){
+    if(arg.length>0){
+      if(arg[0]=='select'){
+        this.OnSelectType.next(arg[1]); 
+      }
+    }
+  }
+
+  selectedMenu($event : string){
+    this.selectedType = $event;
+    this.OnSelectType.next(this.selectedType);
   }
 
 
-  getIconType(type:string){
+  nzTabPosition: NzTabPosition = 'top';
 
+  getIconType(type:string){
     let  imgSrc:string="";
     switch(type){
       case 'cdn' : 

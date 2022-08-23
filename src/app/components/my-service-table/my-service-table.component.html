@@ -1,33 +1,36 @@
-<nz-table nzBordered nzSize="middle" class="w-full text-center" [nzScroll]="{ y: '140' }" >
-    <thead class="text-left">
-      <tr>
-        <th  nzWidth="500px" nzLeft>نام / مشخصه</th>
-        <th  nzWidth="150px" >هزینه</th>
-        <th  nzWidth="150px" >تاریخ سررسید</th>
-        <th  nzWidth="100px"  >عملیات</th>
+
+<nz-table  nzSize="middle" class=" w-full text-right table" >
+    <thead class="text-center">
+      <tr class="tr-head" >
+        <th  class="tr-head-name" nzWidth="300px" >نام / مشخصه</th>
+        <th  nzWidth="250px" >هزینه</th>
+        <th  nzWidth="250px" >تاریخ سررسید</th>
+        <th  nzWidth="200px"  >عملیات</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let data of dataItem">
-        <td>
-          <div class="grid grid-cols-3 ">
-            <span class="icon-menu" > * </span>
-            <span class="icon-menu" > 
-              <img src="../../../assets/svgs/{{data.type}}.svg" />
-            </span>
+        <td class="tr-body-name">
+          <div class="inline-flex ">
+            <div  class="" > 
+              <a *ngIf="data.status=='Active'" class="point-color-active" > * </a>
+              <a *ngIf="data.status=='Pending'" class="point-color-pending" > * </a>
+              <a *ngIf="data.status=='Cancelled'" class="point-color-canceled" > * </a>
+           </div>
+            <img class="icon-menu" src="../../../assets/svgs/{{data.type}}.svg" />
             <span>{{data.name}}</span>
           </div>
         </td>
-        <td>{{data.amount}}</td>
-        <td>{{data.nextduedate}}</td>
+        <td class="tr-body-td" >{{data.amount}}   تومان (ماهیانه) </td>
+        <td class="tr-body-td" >{{data.nextduedate}}</td>
         <td>
-          <div class="">
+          <div class="tr-body-action align-middle" [ngClass]=" data.status=='Cancelled' ? 'tr-body-action-disable' : ''" >
             <a *ngIf="data.status=='Active'" > مدیریت سرویس </a>
-            <a *ngIf="data.status=='Pendding'" > مشاهده فاکتور </a>
-            <a *ngIf="data.status=='Active1'" > در حال آماده سازی </a>
+            <a *ngIf="data.status=='Pending'" > مشاهده فاکتور </a>
             <a *ngIf="data.status=='Cancelled'" > لغو شده </a>
           </div>
         </td>
       </tr>
     </tbody>
   </nz-table>
+  <!-- <div class="h-2/5 overflow-x-hidden overflow-y-scroll scroll-smooth hover:scroll-auto"></div> -->

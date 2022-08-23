@@ -1,0 +1,93 @@
+.table {
+    margin-right: 15px;
+    font-family: 'IRANYekan';
+}
+
+thead > tr > th , tbody > tr > td{
+    height: 50px;
+    margin-right: 15px;
+}
+
+
+.tr-head{
+    box-shadow: 0px 4px 15px rgba(39, 106, 156, 0.03);
+    height: 60px;
+    background-color: #fff;
+
+    font-family: 'IRANYekan';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    align-items: center;
+    text-align: center;
+    color: rgba(85, 118, 139, 0.7);
+}
+
+.tr-head-name{
+    text-align: right;
+    padding-right: 37px  ;
+}
+
+.tr-body-td{
+    font-family: 'IRANYekan';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 22px;
+    color: #55768B;
+    text-align: center;
+}
+
+.tr-body-name{
+    text-align: right;
+    padding-right: 12px  ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    color: #55768B;
+}
+
+.icon-menu{
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+    margin-right: 12px;    
+}
+
+.tr-body-action{
+    border: 1px solid #248FDE;
+    border-radius: 5px;
+    font-family: 'IRANYekan';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21px;
+    color: #248FDE;
+    height: 35px;
+    width: 130px;
+    text-align: center;
+    padding-top: 4px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.tr-body-action-disable{
+
+    opacity: 0.4;
+    cursor: none;
+}
+
+.point-color-active{
+    color: #44D3A7;
+}
+
+.point-color-pending{
+    color: #FFBA1F;
+}
+
+.point-color-canceled{
+    color: #FE6A93;
+}

@@ -1,0 +1,22 @@
+body{
+    overflow: hidden;
+    background-color: #F5F5F5 !important;
+}
+
+.grid-height{
+    height: calc(100vh - 300px) !important;
+}
+
+.grid-height-compact{
+    height: calc(100vh - 200px) !important;
+}
+
+.main-page{
+    border-radius: 10px;
+}
+    
+    .viewport-scroll{
+        overflow-x: scroll;
+        overflow-y: scroll;
+        height: calc(100vh - 300px) !important;
+    }
