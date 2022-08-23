@@ -3,9 +3,9 @@
     <thead class="text-center">
       <tr class="tr-head" >
         <th  class="tr-head-name" nzWidth="300px" >نام / مشخصه</th>
-        <th  nzWidth="250px" >هزینه</th>
-        <th  nzWidth="250px" >تاریخ سررسید</th>
-        <th  nzWidth="200px"  >عملیات</th>
+        <th  class="tr-head-th" nzWidth="250px" >هزینه</th>
+        <th  class="tr-head-th" nzWidth="250px" >تاریخ سررسید</th>
+        <th  class="tr-head-th" nzWidth="200px"  >عملیات</th>
       </tr>
     </thead>
     <tbody>
@@ -22,7 +22,7 @@
           </div>
         </td>
         <td class="tr-body-td" >{{data.amount}}   تومان (ماهیانه) </td>
-        <td class="tr-body-td" >{{data.nextduedate}}</td>
+        <td class="tr-body-td" >{{ changeDateFormat(data.nextduedate) }}</td>
         <td>
           <div class="tr-body-action align-middle" [ngClass]=" data.status=='Cancelled' ? 'tr-body-action-disable' : ''" >
             <a *ngIf="data.status=='Active'" > مدیریت سرویس </a>

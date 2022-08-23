@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyServiceTableComponent } from './components/my-service-table/my-service-table.component';
 import { TableVirtualScrollModule } from 'ng-cdk-table-virtual-scroll';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { PageTitleSearchComponent } from './components/page-title-search/page-title-search.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,8 +23,11 @@ import { NzTabsModule } from 'ng-zorro-antd/tabs';
     MyServiceComponent,
     MyServiceMenuComponent,
     MyServiceTableComponent,
+    PageTitleSearchComponent,
   ],
   imports: [
+    CommonModule,
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

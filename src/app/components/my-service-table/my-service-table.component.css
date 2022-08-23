@@ -20,13 +20,17 @@ thead > tr > th , tbody > tr > td{
     font-size: 12px;
     line-height: 21px;
     align-items: center;
-    text-align: center;
+    text-align: center !important;
     color: rgba(85, 118, 139, 0.7);
 }
 
 .tr-head-name{
-    text-align: right;
-    padding-right: 37px  ;
+    text-align: right ;
+    padding-right: 37px !important  ;
+}
+
+.tr-head-th{
+    text-align: center !important ;
 }
 
 .tr-body-td{
@@ -36,7 +40,7 @@ thead > tr > th , tbody > tr > td{
     font-size: 13px;
     line-height: 22px;
     color: #55768B;
-    text-align: center;
+    text-align: center ;
 }
 
 .tr-body-name{

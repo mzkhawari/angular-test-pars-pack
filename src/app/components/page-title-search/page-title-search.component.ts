@@ -5,6 +5,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
   templateUrl: './page-title-search.component.html',
   styleUrls: ['./page-title-search.component.css']
 })
+
 export class PageTitleSearchComponent implements OnInit {
 
   @Input()
@@ -13,16 +14,16 @@ export class PageTitleSearchComponent implements OnInit {
   @Output()
   OnSearch: EventEmitter<any> =  new EventEmitter();
 
-
   constructor() { }
 
   ngOnInit() {
+
   }
 
   searchText:string="";
   onSearch($event:any){
+    debugger;
     let value = $event.target.value;
     this.OnSearch.next(value);
   }
-
 }

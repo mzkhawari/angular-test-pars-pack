@@ -2,7 +2,6 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/cor
 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { PageTitleSearchComponent } from './page-title-search/page-title-search.component';
 
 const MODULES = [
 ];
@@ -15,13 +14,10 @@ const MODULES = [
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ],  
   declarations: [
-    PageTitleSearchComponent,
   ],  
   exports:[
-    PageTitleSearchComponent,
   ],
   entryComponents: [
-    PageTitleSearchComponent,
   ],
 
 })

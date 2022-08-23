@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as moment from "jalali-moment";
 
 @Component({
   selector: 'app-my-service-table',
@@ -12,6 +13,11 @@ export class MyServiceTableComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    //datesFa = [...datesFa, ]
+  }
+
+  changeDateFormat(value:Date){
+    return moment(value).format('jYYYY/jM/jD')
   }
 
 }

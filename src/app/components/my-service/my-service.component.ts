@@ -16,15 +16,15 @@ export class MyServiceComponent implements OnInit {
   constructor( private baseCrud: BaseCrudService) { }
 
 
-  winHeight:any;
+  winHeight:any;  // for Checking Scren Size and replace Menu with tab.
   ngOnInit() {
     this.getServices();
     this.winHeight = window.innerHeight
   }
 
 
-  dataSourceFilterd:ServiceModelDto[]=[]
-  
+  dataSourceFilterd:ServiceModelDto[]=[] ; /// dataSet For Filterd Value.
+
   filterByType($event:string){
     let value = $event.toLowerCase();
     if(value =='all-service')
@@ -61,17 +61,12 @@ export class MyServiceComponent implements OnInit {
         alert(result.message + result.errors.join(','));
       }
     });
-  
-    
-  }
+  }  // get All Services
 
   
   onSearchItem($event:any){
-
-
-
-  }
-
-
-
+    debugger;
+    let value = $event.toLowerCase();
+    this.dataSourceFilterd = this.dataSource.filter(f=>f.name.toLowerCase().includes(value));    
+  }/// text Searching Just With Name
 }
